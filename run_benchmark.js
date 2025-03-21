@@ -1,3 +1,17 @@
+/**
+ * Script de benchmark para comparar diferentes versões do Azion Bundler (npx edge-function)
+ * 
+ * Como usar:
+ * 1. Coloque este script na pasta raiz do projeto que deseja testar
+ * 2. Modifique as configurações abaixo conforme necessário:
+ *    - versions: array com as versões do pacote que deseja comparar
+ *    - preset: o preset a ser usado (next, astro, etc.)
+ *    - entry: o ponto de entrada (null para usar o padrão/handler do preset)
+ *    - runs: número de vezes que o teste será executado
+ * 3. Execute o script com: node benchmark.js
+ * 4. Os resultados serão salvos na pasta 'benchmark' e um relatório HTML será gerado
+ */
+
 const { execSync } = require('child_process');
 const { performance } = require('perf_hooks');
 const fs = require('fs');
